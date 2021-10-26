@@ -8,16 +8,33 @@
     --container-radius: 2em;
     --container-padding: 2em;
 
-    --top-width: 500px;
+    --top-width: 600px;
     --top-height: 100px;
     --top-font-size: 3em;
     --top-font-color: rgba(0, 0, 0, 0.7);
 
-    --main-width: 500px;
+    --main-width: 600px;
     --main-height: 550px;
 
-    --bottom-width: 500px;
+    --question-font-size: 1.75em;
+    --question-font-color: rgba(0, 0, 0, 0.4);
+    --question-margin-bottomm: 1.5em;
+
+    --answer-padding: 0.8em;
+    --answer-font-size: 1.25em;
+    --answer-font-color: rgba(0, 0, 0, 0.5);
+
+    --button-padding: 0.8em;
+    --button-color: rgb(0, 179, 179);
+    --button-font-size: 0.7em;
+    --button-font-color: rgb(255,255,255);
+    --button-radius: 0.5em;
+    --button-margin-top: 0.8em;
+
+    --bottom-width: 600px;
     --bottom-height: 50px;
+    --bottom-font-size: 0.8em;
+    --bottom-font-color: rgba(0, 0, 0, 0.5);
 }
 
 #wrapper
@@ -40,10 +57,17 @@
     font-family: 'Roboto', sans-serif;
 }
 
+span
+{
+    display: block;
+}
+
 #top
 {
     width: var(--top-width);
     height: var(--top-height);
+    font-size: var(--top-font-size);
+    color: var(--top-font-color);
 }
 
 
@@ -53,19 +77,50 @@
     height: var(--main-height);
 }
 
+#question
+{
+    font-size: var(--question-font-size);
+    color: var(--question-font-color);
+    margin-bottom: var(--question-margin-bottomm)
+}
+
+.answer
+{
+    padding: var(--answer-padding);
+    font-size: var(--answer-font-size);
+    color: var(--answer-font-color);
+}
+
+button
+{
+    background-color: var(--button-color);
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
+    color: var(--button-font-color);
+    border-radius: var(--button-radius);
+    border: none;
+    margin-top: var(--button-margin-top);
+}
+
+
 #bottom
 {
     width: var(--bottom-width);
     height: var(--bottom-height);
+    font-size: var(--bottom-font-size);
+    color: var(--bottom-font-color);
+    margin: auto;
+    position: relative;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-#top
+#bottom span
 {
-    font-size: var(--top-font-size);
-    color: var(--top-font-color);
+    display: inline;
 }
 
-span
+#footer
 {
-    display: block;
+    position: absolute;
+    bottom: 1em;
 }
