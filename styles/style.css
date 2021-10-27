@@ -18,7 +18,8 @@
 
     --question-font-size: 1.75em;
     --question-font-color: rgba(0, 0, 0, 0.4);
-    --question-margin-bottomm: 1em;
+    --question-margin-bottomm: 0.25em;
+    --question-height: 60px;
 
     --answer-padding: 0.8em;
     --answer-font-size: 1.25em;
@@ -83,6 +84,7 @@ span
 
 #question
 {
+    height: var(--question-height);
     font-size: var(--question-font-size);
     color: var(--question-font-color);
     margin-bottom: var(--question-margin-bottomm)

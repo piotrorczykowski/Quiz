@@ -2,26 +2,26 @@
     {
         "question": "How much is 2*2+2?",
         "answers": ["8", "12", "6", "4"],
-        "correct-answer-index": 2
+        "correct_answer_index": 2
     },
     {
         "question": "How many stripes are there on the US flag?",
         "answers": ["14", "13", "10", "16"],
-        "correct-answer-index": 1
+        "correct_answer_index": 1
     },
     {
         "question": "What’s the smallest country in the world?",
         "answers": ["San Marino", "Monaco", "Vatican", "Liechtenstein"],
-        "correct-answer-index": 2
+        "correct_answer_index": 2
     },
     {
         "question": "How many days does it take for the Earth to orbit the Sun?",
         "answers": ["356", "375", "360", "365"],
-        "correct-answer-index": 3
+        "correct_answer_index": 3
     },
     {
         "question": "When was Netflix founded?",
         "answers": ["1997", "2004", "1999", "2011"],
-        "correct-answer-index": 0
+        "correct_answer_index": 0
     }
 ]
