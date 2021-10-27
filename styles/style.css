@@ -18,7 +18,7 @@
 
     --question-font-size: 1.75em;
     --question-font-color: rgba(0, 0, 0, 0.4);
-    --question-margin-bottomm: 1.5em;
+    --question-margin-bottomm: 1em;
 
     --answer-padding: 0.8em;
     --answer-font-size: 1.25em;
@@ -30,6 +30,10 @@
     --button-font-color: rgb(255,255,255);
     --button-radius: 0.5em;
     --button-margin-top: 0.8em;
+
+    --button-hover-color: rgba(0, 179, 179, 0.9);
+
+    --button-active-color:rgb(2, 158, 158);
 
     --bottom-width: 600px;
     --bottom-height: 50px;
@@ -102,12 +106,23 @@ button
     margin-top: var(--button-margin-top);
 }
 
+button:hover
+{
+    background-color: var(--button-hover-color);
+    cursor: pointer;
+}
+
+button:active
+{
+    background-color: var(--button-active-color);
+}
 
 #bottom
 {
     width: var(--bottom-width);
     height: var(--bottom-height);
     font-size: var(--bottom-font-size);
+    font-weight: bold;
     color: var(--bottom-font-color);
     margin: auto;
     position: relative;
