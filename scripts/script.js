@@ -7,7 +7,6 @@ $(document).ready(function()
     const fourth_answer = $('#description-d');
     const which_question = $('#which-question');
     const max_question = $('#max-question');
-    let index = 1;
     let score = 0;
 
     function updateInformation(data)
@@ -19,14 +18,15 @@ $(document).ready(function()
         fourth_answer.text(data.answers[3]);
     }
 
-    const updateProgress = (maxOfQuestion) => { which_question.text(index); max_question.text(maxOfQuestion); }
+    const updateProgress = (index, maxOfQuestion) => { which_question.text(index); max_question.text(maxOfQuestion); }
     const checkAnswer = (correctAnswer, userAnswer) => { (userAnswer==correctAnswer) ? score+=1 : score+=0; }
 
     $.getJSON('questions.json', data => 
     {
+        let index = 1;
         const number_of_questions = Object.keys(data).length;
         updateInformation(data[0]);
-        updateProgress(number_of_questions);
+        updateProgress(index, number_of_questions);
 
         $('button').click(event =>
         {
@@ -40,11 +40,13 @@ $(document).ready(function()
                 {
                     updateInformation(data[index]);
                     index++;
+                    updateProgress(index, number_of_questions);
                 }
-                else index+=2;
-                
-                updateProgress(number_of_questions);
             }
         });
+    })
+    .fail(function()
+    {
+        console.log('File not found!');
     });
 });
